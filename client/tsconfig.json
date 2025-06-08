@@ -7,7 +7,6 @@
   "compilerOptions": {
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "lib": ["ESNext"],
-    "types": ["node"]
+    "lib": ["ESNext"]
   }
 }
