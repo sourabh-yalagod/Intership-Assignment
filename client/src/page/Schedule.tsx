@@ -23,7 +23,7 @@ const Schedule = () => {
         phoneNumber,
       });
     },
-    onSuccess: (data) => {
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["tasks"] });
     },
   });
@@ -112,7 +112,7 @@ const Schedule = () => {
       <section className="max-w-3xl mx-auto space-y-8">
         <ul>
           {data.data &&
-            data?.data?.tasks?.map((task: any, key: number) => {
+            data?.data?.tasks?.map((task: any) => {
               return <TaskCard key={task._id} task={task} />;
             })}
         </ul>

@@ -3,7 +3,7 @@ import { ApiError } from "./ApiError";
 
 const connectDb = async () => {
   try {
-    const response = await mongoose.connect(process.env.MONGODB_URL as string, {
+    await mongoose.connect(process.env.MONGODB_URL as string, {
       dbName: "Scheduler",
     });
     console.log("Mongo DB connected");
